@@ -57,7 +57,11 @@ def main():
     # Build instance images
     try:
         successful, failed = build_instance_images(
-            client=client, dataset=dataset, max_workers=max_workers, tag=LATEST
+            client=client,
+            dataset=dataset,
+            max_workers=max_workers,
+            tag=LATEST,
+            force_rebuild=True,
         )
 
         print(f"Successfully built {len(successful)} images")

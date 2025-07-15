@@ -998,12 +998,11 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "swebench" }]
+requires-dist = [{ name = "swebench", editable = "SWE-bench" }]
 
 [[package]]
 name = "swebench"
-version = "4.0.3"
-source = { registry = "https://pypi.org/simple" }
+source = { editable = "SWE-bench" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "chardet" },
@@ -1020,10 +1019,54 @@ dependencies = [
     { name = "tqdm" },
     { name = "unidiff" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f4/f4/6e687aaad558702eab95defde9180ac00ed84caa27f077f3c3ec3a99c730/swebench-4.0.3.tar.gz", hash = "sha256:73947dcb01dd500c322cc56561e13602a37df740fbb7e86e66474216b57f606d", size = 130156, upload-time = "2025-05-07T00:43:12.511Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/07/1e/4dc8776598c875f03329df3f2d80ef1839811b8937baded434d55d5fd5e5/swebench-4.0.3-py3-none-any.whl", hash = "sha256:30b20a1cca4a287b7b120e5c9d19b1642d8f2118e04ff0d680e9113f666f3cb5", size = 154199, upload-time = "2025-05-07T00:43:11.189Z" },
+
+[package.metadata]
+requires-dist = [
+    { name = "anthropic", marker = "extra == 'datasets'" },
+    { name = "anthropic", marker = "extra == 'inference'" },
+    { name = "beautifulsoup4" },
+    { name = "chardet" },
+    { name = "datasets" },
+    { name = "docker" },
+    { name = "flash-attn", marker = "extra == 'inference'" },
+    { name = "ghapi" },
+    { name = "gitpython" },
+    { name = "jedi", marker = "extra == 'datasets'" },
+    { name = "jedi", marker = "extra == 'inference'" },
+    { name = "mike", marker = "extra == 'docs'" },
+    { name = "mkdocs", marker = "extra == 'docs'" },
+    { name = "mkdocs-glightbox", marker = "extra == 'docs'" },
+    { name = "mkdocs-include-markdown-plugin", marker = "extra == 'docs'" },
+    { name = "mkdocs-material", marker = "extra == 'docs'" },
+    { name = "mkdocstrings", marker = "extra == 'docs'" },
+    { name = "mkdocstrings-python", marker = "extra == 'docs'" },
+    { name = "modal" },
+    { name = "openai", marker = "extra == 'datasets'" },
+    { name = "openai", marker = "extra == 'inference'" },
+    { name = "peft", marker = "extra == 'inference'" },
+    { name = "pre-commit" },
+    { name = "protobuf", marker = "extra == 'datasets'" },
+    { name = "protobuf", marker = "extra == 'inference'" },
+    { name = "pymdown-extensions", marker = "extra == 'docs'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "python-dotenv" },
+    { name = "requests" },
+    { name = "requests", marker = "extra == 'inference'" },
+    { name = "rich" },
+    { name = "sentencepiece", marker = "extra == 'datasets'" },
+    { name = "sentencepiece", marker = "extra == 'inference'" },
+    { name = "tenacity" },
+    { name = "tiktoken", marker = "extra == 'datasets'" },
+    { name = "tiktoken", marker = "extra == 'inference'" },
+    { name = "torch", marker = "extra == 'inference'" },
+    { name = "tqdm" },
+    { name = "transformers", marker = "extra == 'datasets'" },
+    { name = "transformers", marker = "extra == 'inference'" },
+    { name = "triton", marker = "extra == 'inference'" },
+    { name = "unidiff" },
 ]
+provides-extras = ["datasets", "inference", "test", "docs"]
 
 [[package]]
 name = "synchronicity"
